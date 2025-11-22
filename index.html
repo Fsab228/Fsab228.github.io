@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bot Developer & Automation Expert - Building intelligent bots and automation solutions with AI. AI Chatbots, Crypto Trading Bots, Business Automation.">
+    <meta name="keywords" content="bot developer, telegram bot, discord bot, AI chatbot, crypto bot, automation, python developer">
+    <meta name="author" content="Bot Developer">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fsab228.github.io/">
+    <meta property="og:title" content="Bot Developer & Automation Expert">
+    <meta property="og:description" content="Building intelligent bots and automation solutions with AI">
+    <meta property="og:image" content="https://fsab228.github.io/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fsab228.github.io/">
+    <meta property="twitter:title" content="Bot Developer & Automation Expert">
+    <meta property="twitter:description" content="Building intelligent bots and automation solutions with AI">
+    
+    <title>Bot Developer & Automation Expert | AI Bots & Automation Solutions</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .neon-green {
+            color: #00ff88;
+        }
+        
+        .bg-neon-green {
+            background-color: #00ff88;
+        }
+        
+        .border-neon-green {
+            border-color: #00ff88;
+        }
+        
+        .glow-green {
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+        
+        .glow-green-hover:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            border-color: #00ff88;
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
+        }
+        
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .code-animation {
+            position: absolute;
+            color: rgba(0, 255, 136, 0.1);
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            white-space: pre;
+            overflow: hidden;
+        }
+        
+        .nav-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+        }
+        
+        .section-padding {
+            padding: 6rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 4rem 0;
+            }
+        }
+        
+        .price-tag {
+            background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+            color: #0a0a0a;
+            font-weight: 700;
+        }
+        
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+            filter: drop-shadow(0 0 10px rgba(0, 255, 136, 0.8));
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold neon-green">
+                    <i class="fas fa-robot mr-2"></i>BotDev
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-[#00ff88] transition">Home</a>
+                    <a href="#services" class="hover:text-[#00ff88] transition">Services</a>
+                    <a href="#portfolio" class="hover:text-[#00ff88] transition">Portfolio</a>
+                    <a href="#tech" class="hover:text-[#00ff88] transition">Tech Stack</a>
+                    <a href="#contact" class="hover:text-[#00ff88] transition">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl neon-green">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#home" class="block py-2 hover:text-[#00ff88] transition">Home</a>
+                <a href="#services" class="block py-2 hover:text-[#00ff88] transition">Services</a>
+                <a href="#portfolio" class="block py-2 hover:text-[#00ff88] transition">Portfolio</a>
+                <a href="#tech" class="block py-2 hover:text-[#00ff88] transition">Tech Stack</a>
+                <a href="#contact" class="block py-2 hover:text-[#00ff88] transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center section-padding pt-24 relative overflow-hidden">
+        <div class="animated-bg"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div data-aos="fade-down" class="mb-6">
+                <span class="inline-block px-4 py-2 bg-[#00ff88]/20 text-[#00ff88] rounded-full text-sm font-semibold mb-4 border border-[#00ff88]/30">
+                    <i class="fas fa-code mr-2"></i>Automation Expert
+                </span>
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-7xl lg:text-8xl font-black mb-6">
+                <span class="gradient-text">Bot Developer</span><br>
+                <span class="text-white">& Automation Expert</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Building intelligent bots and automation solutions that save time and make money.
+                <br>Powered by AI, optimized for performance.
+            </p>
+            <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <a href="#portfolio" class="px-8 py-4 bg-[#00ff88] text-black font-bold rounded-lg hover:bg-[#00d4ff] transition glow-green-hover">
+                    <i class="fas fa-briefcase mr-2"></i>View Work
+                </a>
+                <a href="#contact" class="px-8 py-4 border-2 border-[#00ff88] text-[#00ff88] font-bold rounded-lg hover:bg-[#00ff88]/10 transition">
+                    <i class="fas fa-envelope mr-2"></i>Contact Me
+                </a>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                <div class="text-center">
+                    <div class="text-4xl font-bold neon-green mb-2">50+</div>
+                    <div class="text-sm text-gray-400">Bots Created</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold neon-green mb-2">100%</div>
+                    <div class="text-sm text-gray-400">Client Satisfaction</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold neon-green mb-2">24/7</div>
+                    <div class="text-sm text-gray-400">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-[#0f0f0f]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    My <span class="gradient-text">Services</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Professional bot development and automation solutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- AI Chatbots -->
+                <div data-aos="fade-up" data-aos-delay="100" class="card-hover bg-[#151515] p-8 rounded-xl">
+                    <div class="text-5xl mb-6 neon-green text-center">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold">AI Chatbots</h3>
+                        <span class="price-tag px-4 py-1 rounded-full text-sm">From $100</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Intelligent chatbots powered by GPT-4, Claude, and custom AI models. 
+                        Natural language processing, context awareness, multi-language support.
+                    </p>
+                    <ul class="space-y-3 text-gray-300 mb-6">
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>GPT-4 Integration</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Custom AI Training</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Multi-language Support</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Context Memory</li>
+                    </ul>
+                    <a href="#contact" class="block text-center px-6 py-3 border border-[#00ff88] text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Crypto Trading Bots -->
+                <div data-aos="fade-up" data-aos-delay="200" class="card-hover bg-[#151515] p-8 rounded-xl">
+                    <div class="text-5xl mb-6 neon-green text-center">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold">Crypto Trading Bots</h3>
+                        <span class="price-tag px-4 py-1 rounded-full text-sm">From $120</span>
+                    </div>
+                        <p class="text-gray-400 mb-6">
+                            Advanced cryptocurrency trading bots, price alerts, portfolio trackers. 
+                            Real-time market analysis with Binance API, multi-exchange support, risk management.
+                        </p>
+                        <ul class="space-y-3 text-gray-300 mb-6">
+                            <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Price Alerts</li>
+                            <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Auto Trading</li>
+                            <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Portfolio Tracking</li>
+                            <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Binance API Integration</li>
+                        </ul>
+                    <a href="#contact" class="block text-center px-6 py-3 border border-[#00ff88] text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Business Automation -->
+                <div data-aos="fade-up" data-aos-delay="300" class="card-hover bg-[#151515] p-8 rounded-xl">
+                    <div class="text-5xl mb-6 neon-green text-center">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold">Business Automation</h3>
+                        <span class="price-tag px-4 py-1 rounded-full text-sm">From $150</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Custom automation solutions for workflows, data processing, 
+                        social media management, and business process optimization.
+                    </p>
+                    <ul class="space-y-3 text-gray-300 mb-6">
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Workflow Automation</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Data Processing</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>API Integration</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Custom Scripts</li>
+                    </ul>
+                    <a href="#contact" class="block text-center px-6 py-3 border border-[#00ff88] text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Custom Development -->
+                <div data-aos="fade-up" data-aos-delay="400" class="card-hover bg-[#151515] p-8 rounded-xl">
+                    <div class="text-5xl mb-6 neon-green text-center">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-2xl font-bold">Custom Development</h3>
+                        <span class="price-tag px-4 py-1 rounded-full text-sm">On Request</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Custom software solutions, web applications, APIs, scripts, and any development project tailored to your specific needs.
+                    </p>
+                    <ul class="space-y-3 text-gray-300 mb-6">
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Web Applications</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Custom APIs</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Software Development</li>
+                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Project-Based Work</li>
+                    </ul>
+                    <a href="#contact" class="block text-center px-6 py-3 border border-[#00ff88] text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    My <span class="gradient-text">Portfolio</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Featured projects showcasing my expertise in bot development
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1: AI ChatBot -->
+                <div data-aos="fade-up" data-aos-delay="100" class="card-hover bg-[#151515] rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-[#00ff88] to-[#00d4ff] flex items-center justify-center relative">
+                        <i class="fas fa-comments text-8xl text-black opacity-30"></i>
+                        <!-- Placeholder for screenshot -->
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold">AI ChatBot</h3>
+                            <span class="px-3 py-1 bg-[#00ff88]/20 text-[#00ff88] rounded-full text-xs">AI</span>
+                        </div>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Intelligent Telegram chatbot with OpenAI GPT-4 integration. 
+                            Context-aware conversations, multi-user support, admin controls.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">Python</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">GPT-4</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">aiogram</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">PostgreSQL</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Fsab228" 
+                               target="_blank" 
+                               class="flex-1 text-center px-4 py-2 bg-[#0a0a0a] border border-[#00ff88]/30 text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openModal('ai-chatbot')" 
+                                    class="flex-1 px-4 py-2 border border-[#00ff88]/30 text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                                <i class="fas fa-eye mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2: Crypto Alert Bot -->
+                <div data-aos="fade-up" data-aos-delay="200" class="card-hover bg-[#151515] rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-[#00d4ff] to-[#00ff88] flex items-center justify-center relative">
+                        <i class="fas fa-chart-line text-8xl text-black opacity-30"></i>
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold">Crypto Alert Bot</h3>
+                            <span class="px-3 py-1 bg-[#00ff88]/20 text-[#00ff88] rounded-full text-xs">Crypto</span>
+                        </div>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Telegram bot for cryptocurrency price monitoring, alerts, and portfolio tracking. 
+                            Real-time data from CoinGecko API and Binance API with Redis-based alert system.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">Python</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">aiogram</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">Binance API</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">Redis</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">Docker</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Fsab228/telegram-crypto-alert-bot" 
+                               target="_blank" 
+                               class="flex-1 text-center px-4 py-2 bg-[#0a0a0a] border border-[#00ff88]/30 text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openModal('crypto-bot')" 
+                                    class="flex-1 px-4 py-2 border border-[#00ff88]/30 text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                                <i class="fas fa-eye mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3: Lead Generation Bot -->
+                <div data-aos="fade-up" data-aos-delay="300" class="card-hover bg-[#151515] rounded-xl overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-[#00ff88] to-[#00d4ff] flex items-center justify-center relative">
+                        <i class="fas fa-bullseye text-8xl text-black opacity-30"></i>
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold">Lead Generation Bot</h3>
+                            <span class="px-3 py-1 bg-[#00ff88]/20 text-[#00ff88] rounded-full text-xs">Automation</span>
+                        </div>
+                        <p class="text-gray-400 mb-4 text-sm">
+                            Telegram userbot for automatic lead generation and filtering. 
+                            Morphological analysis, multi-channel monitoring, smart filtering.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">Python</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">Telethon</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">NLP</span>
+                            <span class="px-2 py-1 bg-[#0a0a0a] rounded text-xs">Async</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Fsab228" 
+                               target="_blank" 
+                               class="flex-1 text-center px-4 py-2 bg-[#0a0a0a] border border-[#00ff88]/30 text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openModal('lead-bot')" 
+                                    class="flex-1 px-4 py-2 border border-[#00ff88]/30 text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
+                                <i class="fas fa-eye mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="section-padding bg-[#0f0f0f]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Tech <span class="gradient-text">Stack</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Technologies and tools I use to build powerful solutions
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center items-center gap-8 max-w-6xl mx-auto">
+                <div data-aos="zoom-in" data-aos-delay="100" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Python</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="150" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">JavaScript</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Telegram</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="250" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Discord</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">OpenAI</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="350" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Git</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Redis</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="450" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">APIs</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="500" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Docker</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="550" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Cloud</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="600" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Linux</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="650" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">REST API</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="700" class="tech-icon text-center w-24">
+                    <div class="text-5xl mb-3 neon-green">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="text-sm text-gray-400">Binance API</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Get In <span class="gradient-text">Touch</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-4">
+                    Ready to automate your business? Let's discuss your project
+                </p>
+                <div class="max-w-2xl mx-auto mt-6 p-4 bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-lg">
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        <i class="fas fa-info-circle text-[#00ff88] mr-2"></i>
+                        <strong class="text-[#00ff88]">Important:</strong> All my works and project orders are handled exclusively through Fiverr. 
+                        You can write to me on social networks only if there are some questions. 
+                        For placing orders, please use Fiverr platform only.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <!-- Telegram -->
+                    <a href="https://t.me/Fsabik" 
+                       target="_blank"
+                       data-aos="fade-up" data-aos-delay="100"
+                       class="card-hover bg-[#151515] p-8 rounded-xl text-center">
+                        <div class="text-5xl mb-4 neon-green">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Telegram</h3>
+                        <p class="text-gray-400 text-sm">@Fsabik</p>
+                        <p class="text-gray-500 text-xs mt-2">Questions only</p>
+                    </a>
+                    
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/qr/HUBO56VRQ6RDI1" 
+                       target="_blank"
+                       data-aos="fade-up" data-aos-delay="200"
+                       class="card-hover bg-[#151515] p-8 rounded-xl text-center">
+                        <div class="text-5xl mb-4 neon-green">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">WhatsApp</h3>
+                        <p class="text-gray-400 text-sm">Contact me</p>
+                        <p class="text-gray-500 text-xs mt-2">Questions only</p>
+                    </a>
+                    
+                    <!-- Fiverr (в середине) -->
+                    <a href="https://www.fiverr.com/fsab_1" 
+                       target="_blank"
+                       data-aos="fade-up" data-aos-delay="300"
+                       class="card-hover bg-[#151515] p-8 rounded-xl text-center">
+                        <div class="text-5xl mb-4 neon-green font-bold leading-none">
+                            <span class="inline-block text-[#00ff88]">Fi</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fiverr</h3>
+                        <p class="text-gray-400 text-sm">@fsab_1</p>
+                        <p class="text-gray-500 text-xs mt-2">Order here</p>
+                    </a>
+                    
+                    <!-- Email -->
+                    <a href="mailto:serafimkeista@gmail.com" 
+                       data-aos="fade-up" data-aos-delay="400"
+                       class="card-hover bg-[#151515] p-8 rounded-xl text-center">
+                        <div class="text-5xl mb-4 neon-green">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Email</h3>
+                        <p class="text-gray-400 text-sm">serafimkeista@gmail.com</p>
+                        <p class="text-gray-500 text-xs mt-2">Questions only</p>
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/Fsab228" 
+                       target="_blank"
+                       data-aos="fade-up" data-aos-delay="500"
+                       class="card-hover bg-[#151515] p-8 rounded-xl text-center">
+                        <div class="text-5xl mb-4 neon-green">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">GitHub</h3>
+                        <p class="text-gray-400 text-sm">@Fsab228</p>
+                        <p class="text-gray-500 text-xs mt-2">Open source</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#00ff88]/10 py-8 bg-[#0f0f0f]">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2025 Bot Developer. All rights reserved.
+                </div>
+                <div class="flex justify-center items-center space-x-6">
+                    <a href="https://www.fiverr.com/fsab_1" target="_blank" class="text-gray-400 hover:text-[#00ff88] transition" title="Fiverr">
+                        <i class="fab fa-fiverr text-2xl"></i>
+                    </a>
+                    <a href="mailto:serafimkeista@gmail.com" class="text-gray-400 hover:text-[#00ff88] transition" title="Email">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/qr/HUBO56VRQ6RDI1" target="_blank" class="text-gray-400 hover:text-[#00ff88] transition" title="WhatsApp">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="https://t.me/Fsabik" target="_blank" class="text-gray-400 hover:text-[#00ff88] transition" title="Telegram">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="project-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+        <div class="bg-[#151515] rounded-xl p-8 max-w-2xl w-full mx-4 border border-[#00ff88]/30">
+            <button onclick="closeModal()" class="float-right text-gray-400 hover:text-white">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+            } else {
+                navbar.style.background = 'rgba(10, 10, 10, 0.8)';
+            }
+        });
+        
+        // Modal functions
+        function openModal(projectId) {
+            const modal = document.getElementById('project-modal');
+            const content = document.getElementById('modal-content');
+            
+            const projects = {
+                'ai-chatbot': {
+                    title: 'AI ChatBot',
+                    description: 'Intelligent Telegram chatbot with OpenAI GPT-4 integration. Features context-aware conversations, multi-user support, admin controls, and custom AI training.',
+                    tech: ['Python', 'GPT-4', 'aiogram', 'PostgreSQL', 'Redis'],
+                    github: 'https://github.com/Fsab228'
+                },
+                'crypto-bot': {
+                    title: 'Crypto Alert Bot',
+                    description: 'Telegram bot for cryptocurrency price monitoring, alerts, and portfolio tracking. Real-time data from CoinGecko API and Binance API with Redis-based alert system and Docker deployment.',
+                    tech: ['Python', 'aiogram', 'Binance API', 'Redis', 'Docker', 'CoinGecko API'],
+                    github: 'https://github.com/Fsab228/telegram-crypto-alert-bot'
+                },
+                'lead-bot': {
+                    title: 'Lead Generation Bot',
+                    description: 'Telegram userbot for automatic lead generation and filtering. Uses morphological analysis, multi-channel monitoring, and smart filtering algorithms.',
+                    tech: ['Python', 'Telethon', 'NLP', 'Async', 'Morphological Analysis'],
+                    github: 'https://github.com/Fsab228'
+                }
+            };
+            
+            const project = projects[projectId];
+            if (project) {
+                content.innerHTML = `
+                    <h2 class="text-3xl font-bold mb-4 neon-green">${project.title}</h2>
+                    <p class="text-gray-400 mb-6">${project.description}</p>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold mb-3">Tech Stack:</h3>
+                        <div class="flex flex-wrap gap-2">
+                            ${project.tech.map(tech => `<span class="px-3 py-1 bg-[#0a0a0a] rounded text-sm">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+                    <a href="${project.github}" target="_blank" class="inline-block px-6 py-3 bg-[#00ff88] text-black font-bold rounded-lg hover:bg-[#00d4ff] transition">
+                        <i class="fab fa-github mr-2"></i>View on GitHub
+                    </a>
+                `;
+                modal.classList.remove('hidden');
+            }
+        }
+        
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+        }
+        
+        // Close modal on outside click
+        document.getElementById('project-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'project-modal') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
