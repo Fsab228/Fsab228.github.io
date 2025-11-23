@@ -260,8 +260,8 @@
                     <a href="#faq" class="hover:text-[#00ff88] transition">FAQ</a>
                     <a href="#contact" class="hover:text-[#00ff88] transition">Контакты</a>
                 </div>
-                <a href="#contact-form" class="hidden md:block px-6 py-2 bg-[#00ff88] text-black font-bold rounded-lg hover:bg-[#00d4ff] transition">
-                    Оставить заявку
+                <a href="#packages" class="hidden md:block px-6 py-2 bg-[#00ff88] text-black font-bold rounded-lg hover:bg-[#00d4ff] transition">
+                    Пакеты услуг
                 </a>
                 <button id="mobile-menu-btn" class="md:hidden text-2xl neon-green">
                     <i class="fas fa-bars"></i>
@@ -284,11 +284,6 @@
     <section id="home" class="min-h-screen flex items-center justify-center section-padding pt-24 relative overflow-hidden">
         <div class="animated-bg"></div>
         <div class="container mx-auto px-6 text-center relative z-10">
-            <!-- Site Only Banner -->
-            <div class="site-only-banner max-w-4xl mx-auto mb-8" data-aos="fade-down">
-                <p><strong>Внимание — заявки принимаю ТОЛЬКО через сайт.</strong> ЛС и сообщения в Kwork/Telegram не обрабатываю для старта проекта.</p>
-                <a class="btn-primary" href="#contact-form">Оставить заявку</a>
-            </div>
             <div data-aos="fade-down" class="mb-6">
                 <span class="inline-block px-4 py-2 bg-[#00ff88]/20 text-[#00ff88] rounded-full text-sm font-semibold mb-4 border border-[#00ff88]/30">
                     <i class="fas fa-code mr-2"></i>Эксперт по автоматизации
@@ -303,14 +298,11 @@
                 <br>На базе AI, оптимизировано для производительности.
             </p>
             <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <a href="#contact-form" class="cta-button px-8 py-4 rounded-lg">
-                    <i class="fas fa-paper-plane mr-2"></i>Оставить заявку
+                <a href="#packages" class="cta-button px-8 py-4 rounded-lg">
+                    <i class="fas fa-tags mr-2"></i>Выбрать пакет
                 </a>
                 <a href="#cases" class="cta-button-secondary px-8 py-4 rounded-lg">
                     <i class="fas fa-briefcase mr-2"></i>Смотреть кейсы
-                </a>
-                <a href="#packages" class="cta-button-secondary px-8 py-4 rounded-lg">
-                    <i class="fas fa-tags mr-2"></i>Оценить задачу
                 </a>
             </div>
             <div data-aos="fade-up" data-aos-delay="400" class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
@@ -697,32 +689,43 @@
     <!-- Packages Section -->
     <section id="packages" class="section-padding">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    Пакеты <span class="gradient-text">Услуг</span>
+                    Выберите пакет, который <span class="gradient-text">подходит вашему проекту</span>
                 </h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Готовые решения для разных задач и бюджетов
-                </p>
+            </div>
+            
+            <!-- Banner -->
+            <div class="max-w-4xl mx-auto mb-12" data-aos="fade-up">
+                <div class="site-only-banner">
+                    <p><strong>Внимание — заявки принимаю ТОЛЬКО через сайт.</strong> ЛС и сообщения не обрабатываю.</p>
+                    <a class="btn-primary" href="#packages">Выбрать пакет</a>
+                </div>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Basic Package -->
                 <div data-aos="fade-up" data-aos-delay="100" class="package-card bg-[#151515] p-8 rounded-xl border border-[#00ff88]/20">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">Basic</h3>
-                        <div class="text-4xl font-bold neon-green mb-2">от 500 руб.</div>
-                        <div class="text-sm text-gray-400">Микро-задача: до 2 часов работы</div>
+                        <div class="text-6xl mb-4" alt="Basic пакет">⏱</div>
+                        <h3 class="text-2xl font-bold mb-3">Микро-задача</h3>
+                        <div class="text-4xl font-bold neon-green mb-2">от 500 ₽</div>
+                        <div class="text-sm text-gray-400">Время выполнения: 1–2 часа</div>
                     </div>
-                    <p class="text-gray-400 text-sm mb-4 text-center">Примеры: исправление бага, простая автоматизация</p>
-                    <ul class="space-y-3 mb-8">
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Быстрое решение простых задач</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Исправление ошибок</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Простая автоматизация</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Базовые доработки</li>
-                    </ul>
-                    <a href="#contact-form" class="block text-center px-6 py-3 border border-[#00ff88] text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
-                        Оставить заявку
+                    <div class="mb-6">
+                        <p class="text-gray-300 font-semibold mb-3">Что входит:</p>
+                        <ul class="space-y-2 text-sm text-gray-400 mb-4">
+                            <li>• Исправление бага</li>
+                            <li>• Простая функция</li>
+                            <li>• Небольшая настройка</li>
+                        </ul>
+                        <div class="bg-[#00ff88]/10 p-4 rounded-lg border border-[#00ff88]/30">
+                            <p class="text-[#00ff88] font-bold text-sm mb-1">✨ Результат:</p>
+                            <p class="text-white text-sm">Мгновенный эффект, экономия времени до 1–2 часов</p>
+                        </div>
+                    </div>
+                    <a href="KWORK_PROFILE_URL" target="_blank" class="block text-center px-6 py-3 bg-[#1E88E5] text-white font-bold rounded-lg hover:bg-[#1565c0] transition shadow-lg">
+                        Заказать на Kwork
                     </a>
                 </div>
                 
@@ -732,42 +735,51 @@
                         <span class="bg-[#00ff88] text-black px-4 py-1 rounded-full text-sm font-bold">ПОПУЛЯРНО</span>
                     </div>
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">Standard</h3>
-                        <div class="text-4xl font-bold neon-green mb-2">от 3000 руб.</div>
-                        <div class="text-sm text-gray-400">Небольшой проект: до 1–3 дней</div>
+                        <div class="text-6xl mb-4" alt="Standard пакет">🤖</div>
+                        <h3 class="text-2xl font-bold mb-3">Мини-проект</h3>
+                        <div class="text-4xl font-bold neon-green mb-2">от 1500 ₽</div>
+                        <div class="text-sm text-gray-400">Время выполнения: 1–3 дня</div>
                     </div>
-                    <p class="text-gray-400 text-sm mb-4 text-center">Примеры: бот с базовым функционалом, парсер</p>
-                    <ul class="space-y-3 mb-8">
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Бот с базовым функционалом</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Парсинг данных</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Интеграция API</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Документация</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>7-14 дней поддержки</li>
-                    </ul>
-                    <a href="#contact-form" class="block text-center px-6 py-3 cta-button rounded-lg">
-                        Оставить заявку
+                    <div class="mb-6">
+                        <p class="text-gray-300 font-semibold mb-3">Что входит:</p>
+                        <ul class="space-y-2 text-sm text-gray-400 mb-4">
+                            <li>• Бот с базовым функционалом</li>
+                            <li>• Парсер данных</li>
+                            <li>• Простая автоматизация</li>
+                        </ul>
+                        <div class="bg-[#00ff88]/10 p-4 rounded-lg border border-[#00ff88]/30">
+                            <p class="text-[#00ff88] font-bold text-sm mb-1">✨ Результат:</p>
+                            <p class="text-white text-sm">Экономия времени до 8 часов в неделю, процессы упрощены</p>
+                        </div>
+                    </div>
+                    <a href="KWORK_PROFILE_URL" target="_blank" class="block text-center px-6 py-3 bg-[#1E88E5] text-white font-bold rounded-lg hover:bg-[#1565c0] transition shadow-lg">
+                        Заказать на Kwork
                     </a>
                 </div>
                 
                 <!-- Pro Package -->
                 <div data-aos="fade-up" data-aos-delay="300" class="package-card bg-[#151515] p-8 rounded-xl border border-[#00ff88]/20">
                     <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold mb-2">Pro</h3>
-                        <div class="text-4xl font-bold neon-green mb-2">от 15000 руб.</div>
-                        <div class="text-sm text-gray-400">Полный проект: до 1–2 недель</div>
+                        <div class="text-6xl mb-4" alt="Pro пакет">⚙️</div>
+                        <h3 class="text-2xl font-bold mb-3">Полный проект</h3>
+                        <div class="text-4xl font-bold neon-green mb-2">от 5000 ₽</div>
+                        <div class="text-sm text-gray-400">Время выполнения: 1–2 недели</div>
                     </div>
-                    <p class="text-gray-400 text-sm mb-4 text-center">Полная настройка, интеграции, поддержка</p>
-                    <ul class="space-y-3 mb-8">
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Комплексное решение под ключ</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Множественные интеграции</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Масштабируемая архитектура</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Мониторинг и аналитика</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Облачный деплой</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>14-30 дней поддержки</li>
-                        <li><i class="fas fa-check text-[#00ff88] mr-2"></i>Приоритетная поддержка</li>
-                    </ul>
-                    <a href="#contact-form" class="block text-center px-6 py-3 border border-[#00ff88] text-[#00ff88] rounded-lg hover:bg-[#00ff88]/10 transition">
-                        Оставить заявку
+                    <div class="mb-6">
+                        <p class="text-gray-300 font-semibold mb-3">Что входит:</p>
+                        <ul class="space-y-2 text-sm text-gray-400 mb-4">
+                            <li>• Полный проект под ключ</li>
+                            <li>• Автоматизация процессов</li>
+                            <li>• Интеграции с сервисами</li>
+                            <li>• Поддержка и сопровождение</li>
+                        </ul>
+                        <div class="bg-[#00ff88]/10 p-4 rounded-lg border border-[#00ff88]/30">
+                            <p class="text-[#00ff88] font-bold text-sm mb-1">✨ Результат:</p>
+                            <p class="text-white text-sm">Экономия ресурсов и времени, работа под ключ, сопровождение</p>
+                        </div>
+                    </div>
+                    <a href="KWORK_PROFILE_URL" target="_blank" class="block text-center px-6 py-3 bg-[#1E88E5] text-white font-bold rounded-lg hover:bg-[#1565c0] transition shadow-lg">
+                        Заказать на Kwork
                     </a>
                 </div>
             </div>
@@ -1041,96 +1053,34 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    Связаться со <span class="gradient-text">Мной</span>
+                    Мои <span class="gradient-text">Контакты</span>
                 </h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-4">
-                    Готовы автоматизировать ваш бизнес? Обсудим ваш проект
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Свяжитесь со мной через GitHub или Kwork
                 </p>
-                <div class="max-w-2xl mx-auto mt-6 p-4 bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-lg">
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        <i class="fas fa-info-circle text-[#00ff88] mr-2"></i>
-                        <strong class="text-[#00ff88]">Важно:</strong> Все заявки принимаются ТОЛЬКО через сайт. 
-                        ЛС и сообщения в Kwork/Telegram не обрабатываю для старта проекта.
-                    </p>
-                </div>
             </div>
             
-            <div class="max-w-4xl mx-auto">
-                <!-- Contact Form -->
-                <div class="grid md:grid-cols-2 gap-8 mb-12">
-                    <div data-aos="fade-right" class="bg-[#151515] p-8 rounded-xl border border-[#00ff88]/20">
-                        <h3 class="text-2xl font-bold mb-6">Оставить заявку</h3>
-                        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-semibold mb-2">Имя *</label>
-                                <input type="text" name="name" placeholder="Ваше имя" required class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#00ff88]/30 rounded-lg focus:outline-none focus:border-[#00ff88] text-white">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold mb-2">Email *</label>
-                                <input type="email" name="email" placeholder="your@email.com" required class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#00ff88]/30 rounded-lg focus:outline-none focus:border-[#00ff88] text-white">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold mb-2">Ссылка на Kwork (если есть)</label>
-                                <input type="text" name="kwork" placeholder="https://kwork.ru/..." class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#00ff88]/30 rounded-lg focus:outline-none focus:border-[#00ff88] text-white">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold mb-2">Бюджет (примерно)</label>
-                                <input type="text" name="budget" placeholder="500 руб. / 3000 руб. / 15000 руб." class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#00ff88]/30 rounded-lg focus:outline-none focus:border-[#00ff88] text-white">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold mb-2">Желаемый срок</label>
-                                <input type="text" name="deadline" placeholder="1 день / 3 дня / 1 неделя" class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#00ff88]/30 rounded-lg focus:outline-none focus:border-[#00ff88] text-white">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold mb-2">Описание задачи *</label>
-                                <textarea name="message" rows="6" placeholder="Краткое описание задачи и требования" required class="w-full px-4 py-3 bg-[#0a0a0a] border border-[#00ff88]/30 rounded-lg focus:outline-none focus:border-[#00ff88] text-white"></textarea>
-                            </div>
-                            <input type="hidden" name="note" value="Заявка принята через сайт">
-                            <button type="submit" class="w-full cta-button px-6 py-3 rounded-lg">
-                                <i class="fas fa-paper-plane mr-2"></i>Отправить заявку
-                            </button>
-                        </form>
-                        <p class="text-gray-400 text-xs mt-4 text-center">
-                            <i class="fas fa-info-circle mr-1"></i>Важно: заявки принимаются только через эту форму.
-                        </p>
-                    </div>
-                    
-                    <div data-aos="fade-left" class="space-y-6">
-                        <div class="bg-[#151515] p-8 rounded-xl border border-[#00ff88]/20">
-                            <h3 class="text-2xl font-bold mb-6">Контакты</h3>
-                            <div class="space-y-4">
-                                <!-- TODO: replace KWORK_PROFILE_URL -->
-                                <a href="KWORK_PROFILE_URL" target="_blank" class="flex items-center p-4 bg-[#0a0a0a] rounded-lg hover:bg-[#00ff88]/10 transition">
-                                    <div class="text-3xl neon-green font-bold mr-4">Kw</div>
-                                    <div>
-                                        <div class="font-bold">Kwork</div>
-                                        <div class="text-sm text-gray-400">Только для вопросов</div>
-                                    </div>
-                                </a>
-                                <a href="https://t.me/Fsabik" target="_blank" class="flex items-center p-4 bg-[#0a0a0a] rounded-lg hover:bg-[#00ff88]/10 transition">
-                                    <i class="fab fa-telegram text-3xl neon-green mr-4"></i>
-                                    <div>
-                                        <div class="font-bold">Telegram</div>
-                                        <div class="text-sm text-gray-400">@Fsabik - Только вопросы</div>
-                                    </div>
-                                </a>
-                                <a href="https://wa.me/qr/HUBO56VRQ6RDI1" target="_blank" class="flex items-center p-4 bg-[#0a0a0a] rounded-lg hover:bg-[#00ff88]/10 transition">
-                                    <i class="fab fa-whatsapp text-3xl neon-green mr-4"></i>
-                                    <div>
-                                        <div class="font-bold">WhatsApp</div>
-                                        <div class="text-sm text-gray-400">Только вопросы</div>
-                                    </div>
-                                </a>
-                                <a href="mailto:serafimkeista@gmail.com" class="flex items-center p-4 bg-[#0a0a0a] rounded-lg hover:bg-[#00ff88]/10 transition">
-                                    <i class="fas fa-envelope text-3xl neon-green mr-4"></i>
-                                    <div>
-                                        <div class="font-bold">Email</div>
-                                        <div class="text-sm text-gray-400">serafimkeista@gmail.com (для вопросов)</div>
-                                    </div>
-                                </a>
-                            </div>
+            <div class="max-w-2xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- GitHub -->
+                    <a href="https://github.com/Fsab228" target="_blank" data-aos="fade-up" data-aos-delay="100" class="card-hover bg-[#151515] p-8 rounded-xl text-center">
+                        <div class="text-5xl mb-4 neon-green">
+                            <i class="fab fa-github"></i>
                         </div>
-                    </div>
+                        <h3 class="text-xl font-bold mb-2">GitHub</h3>
+                        <p class="text-gray-400 text-sm">@Fsab228</p>
+                        <p class="text-gray-500 text-xs mt-2">Мои проекты и код</p>
+                    </a>
+                    
+                    <!-- Kwork -->
+                    <a href="KWORK_PROFILE_URL" target="_blank" data-aos="fade-up" data-aos-delay="200" class="card-hover bg-[#151515] p-8 rounded-xl text-center">
+                        <div class="text-5xl mb-4 neon-green font-bold">
+                            <span class="text-[#00ff88]">Kw</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Kwork</h3>
+                        <p class="text-gray-400 text-sm">Мой профиль</p>
+                        <p class="text-gray-500 text-xs mt-2">Заказать услугу</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1142,17 +1092,13 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="text-gray-400 text-sm mb-4 md:mb-0 text-center md:text-left">
                     <p>© 2025 Bot Developer. All rights reserved.</p>
-                    <p class="mt-2">Все заявки принимаю ТОЛЬКО через сайт. Контакты: serafimkeista@gmail.com (для вопросов)</p>
                 </div>
                 <div class="flex justify-center items-center space-x-6">
-                    <a href="mailto:serafimkeista@gmail.com" class="text-gray-400 hover:text-[#00ff88] transition" title="Email">
-                        <i class="fas fa-envelope text-2xl"></i>
+                    <a href="https://github.com/Fsab228" target="_blank" class="text-gray-400 hover:text-[#00ff88] transition" title="GitHub">
+                        <i class="fab fa-github text-2xl"></i>
                     </a>
-                    <a href="https://wa.me/qr/HUBO56VRQ6RDI1" target="_blank" class="text-gray-400 hover:text-[#00ff88] transition" title="WhatsApp">
-                        <i class="fab fa-whatsapp text-2xl"></i>
-                    </a>
-                    <a href="https://t.me/Fsabik" target="_blank" class="text-gray-400 hover:text-[#00ff88] transition" title="Telegram">
-                        <i class="fab fa-telegram text-2xl"></i>
+                    <a href="KWORK_PROFILE_URL" target="_blank" class="text-gray-400 hover:text-[#00ff88] transition" title="Kwork">
+                        <span class="text-2xl font-bold text-[#00ff88]">Kw</span>
                     </a>
                 </div>
             </div>
@@ -1218,21 +1164,6 @@
             }
         }
         
-        // Contact Form Handler
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            // Форма отправляется через Formspree
-            // Если Formspree не настроен, можно раскомментировать код ниже для обработки через JavaScript
-            /*
-            e.preventDefault();
-            const formData = new FormData(this);
-            
-            // Здесь можно добавить отправку на сервер или email
-            alert('Спасибо за заявку! Я свяжусь с вами в ближайшее время.');
-            
-            // Очищаем форму
-            this.reset();
-            */
-        });
     </script>
 </body>
 </html>
